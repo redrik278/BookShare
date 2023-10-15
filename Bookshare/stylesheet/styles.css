@@ -1,0 +1,193 @@
+.dark-background {
+    background-color: #000; /* Dark background color */
+    color: #fff; /* White text color */
+}
+ /* Style for the sorting form */
+ #sort-form {
+    display: inline-block;
+    position: relative;
+}
+
+#sort {
+    padding: 10px 25px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sort:hover {
+    background-color: #f5f5f5;
+}
+
+#sort:focus {
+    box-shadow: 0 0 5px #007bff;
+}
+
+/* Style for the label */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.book-details {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    animation: float 3s infinite;
+    
+}
+
+.book-details:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+@keyframes spin-horizontal {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+.underlineEffects ul { 
+margin: 0 auto; 
+padding: 0; 
+list-style: none; 
+display: table;
+text-align: center;
+}
+.underlineEffects li { 
+display: table-cell; 
+position: relative; 
+padding: 15px 0;
+}
+.underlineEffects a {
+color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 0.15em;
+display: inline-block;
+padding: 15px 20px;
+position: relative;
+}
+.underlineEffects a:after {    
+background: none repeat scroll 0 0 transparent;
+bottom: 0;
+content: "";
+display: block;
+height: 2px;
+left: 50%;
+position: absolute;
+background: #fff;
+transition: width 0.3s ease 0s, left 0.3s ease 0s;
+width: 0;
+}
+.underlineEffects a:hover:after { 
+width: 100%; 
+left: 0; 
+}
+body,
+canvas {
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+/* Define the left slide animation keyframes */
+@keyframes leftSlide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Define the typewriter animation keyframes */
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Apply the animations to the element */
+  .left-typewriter-animation {
+        font-family: 'Roboto', sans-serif; /* Use the custom font */
+        font-size: 24px; /* Adjust the font size as needed */
+        overflow: hidden; /* Hide overflowing text */
+        white-space: nowrap; /* Prevent text from wrapping */
+        animation: leftSlide 2s linear infinite, typewriter 2s steps(20) infinite;
+    }
+
+/* Add this CSS in your existing stylesheet or a new one */
+/* Keyframes for disassemble effect */
+@keyframes disassemble {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+}
+
+/* Keyframes for assemble effect */
+@keyframes assemble {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Apply disassemble and assemble animations to the card container */
+.book-details-card {
+  animation: disassemble 0.5s ease-out forwards;
+  transition: opacity 0.5s ease;
+}
+
+/* Apply assemble animation when the card is hovered */
+.book-details-card:hover {
+  animation: assemble 0.5s ease-in forwards;
+}
+
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #e0f7fa, 0 0 20px #18ffff, 0 0 30px #e0f7fa, 0 0 40px #18ffff, 0 0 50px #e0f7fa, 0 0 60px #18ffff;
+  }
+  100% {
+      text-shadow: 0 0 20px #e0f7fa, 0 0 40px #18ffff, 0 0 60px #e0f7fa, 0 0 80px #18ffff, 0 0 100px #e0f7fa, 0 0 120px #18ffff;
+  }
+}
+
+
+
